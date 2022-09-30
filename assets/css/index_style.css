@@ -37,7 +37,7 @@ h6 {
 
 /* Icons */
 .icon {
-    position: absolute;
+    /* position: absolute; */
     transition: scale .2s linear;
     transition: ease-in-out .2s;
     width: 25px;
@@ -59,6 +59,18 @@ h6 {
     position: fixed;
 }
 
+.header:after {
+    content: "";
+    display: block;
+    width: 520px;
+    height: 3px;
+    background-color: #679966;
+    margin: 0 auto;
+
+    top: 100%;
+    z-index: auto;
+}
+
 .header_inner {
     display: flex;
     flex-direction: row;
@@ -71,7 +83,7 @@ h6 {
 }
 
 .write_me a {
-    margin-left: 35px;
+    margin-left: 10px;
 }
 
 .write_me {
@@ -96,21 +108,9 @@ h6 {
     align-items: center;
 }
 
-.navigation:after {
-    content: "";
-    display: block;
-    width: 555px;
-    height: 3px;
-    background-color: #8ABD6E;
-
-    position: absolute;
-    top: 100%;
-    z-index: 1;
-}
-
 .nav_link {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 25px;
     text-decoration: none;
     color: #DFF8CE;
     transition: color .2s linear;
@@ -144,6 +144,96 @@ h6 {
     opacity: 1;
 }
 
+
+/* Main */
 .main {
     margin-top: 55px;
+}
+
+.main_inner {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.main_info {
+    width: 750px;
+    margin: 70px 100px 0px 100px;
+}
+
+.main_header {
+    position: relative;
+    color: #8ABD6E;
+    font-size: 48px;
+    z-index: -1;
+}
+
+.main_header:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+
+    background-color: #56855B;
+
+    left: 0;
+
+    margin-top: 35px;
+}
+
+.main_text {
+    font-size: 32px;
+    margin-top: 35px;
+}
+
+.worker {
+    margin: auto;
+}
+
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: rgba(7, 24, 32, 0.97);
+}
+
+.footer_inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 50px;
+
+    border-top: solid #679966 3px;
+    box-shadow: 0px -1px 6px #000000;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.copyright {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.copyright img {
+    margin-right: 10px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    margin: 0 4px;
+}
+
+/* Buttons */
+.last_works_button {
+    margin: 35px 100px 35px 100px;
 }
