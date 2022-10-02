@@ -237,3 +237,40 @@ h6 {
 .last_works_button {
     margin: 35px 100px 35px 100px;
 }
+
+/* Preloader */
+#preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 240px;
+    height: 240px;
+    background: #071820;
+    border: 1px solid #8ABD6E;
+}
+
+.square {
+    display: block;
+    float: left;
+    width: 70px;
+    height: 70px;
+    background: hsla(0, 0%, 100%, 0);
+
+    animation: loading 2s infinite;
+}
+
+#s1 { animation-delay: .25s;}
+#s2 { animation-delay: .5s;}
+#s3 { animation-delay: 1.75s;}
+#s4 { animation: none;}
+#s5 { animation-delay: .75s;}
+#s6 { animation-delay: 1.5s;}
+#s7 { animation-delay: 1.25s;}
+#s8 { animation-delay: 1s }
+
+@keyframes loading {
+    0% {background: hsla(0, 0%, 100%, 1);}
+    100% {background: hsla(0, 0%, 100%, 0);}
+}
