@@ -370,8 +370,64 @@ h6 {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 860px) {
+
+    /* Header */
     .header_inner {
         height: 45px;
+    }
+
+    .nav_link {
+        font-size: 20px;
+    }
+
+    .header:after {
+        width: 430px;
+    }
+
+    /* Main */
+    .main_inner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .main_info {
+        margin: 20px 20px;
+        width: 450px;
+    }
+
+    .last_works_button {
+        margin: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .worker {
+        margin: 15px auto;
+    }
+
+    /* Footer */
+    .footer_inner {
+        height: 45px;
+    }
+    .copyright {
+        font-size: 14px;
+    }
+    .copyright img {
+        width: 15px;
+    }
+
+    /* Icons */
+    .icon {
+        width: 20px;
+    }
+}
+
+@media (max-width: 725px) {
+    .navigation {
+        display: none;
+    }
+    .header:after {
+        display: none;
     }
 }
