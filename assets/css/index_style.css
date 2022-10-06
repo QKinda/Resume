@@ -50,6 +50,7 @@ h6 {
 
 /* Header */
 .header {
+    z-index: 10000;
     width: 100%;
     top: 0;
     left: 0;
@@ -189,8 +190,20 @@ h6 {
 
 .worker {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.lamp {
+    display: block;
+    transition: transform 1.5s;
+    margin-bottom: 20px;
+}
+
+.lamp:hover {
+    transform: scale(1.2);
+}
 
 /* Footer */
 .footer {
@@ -357,8 +370,11 @@ h6 {
         margin-top: 25px;
     }
 
-    .worker img {
+    .worker .man {
         width: 265px;
+    }
+    .worker .lamp {
+        width: 60px;
     }
 
     .last_works_button {
