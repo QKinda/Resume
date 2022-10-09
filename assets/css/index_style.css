@@ -95,12 +95,14 @@ h6 {
 
 .right_space {
     margin-right: 25px;
+    justify-content: end;
 }
 
 .write_me,
 .right_space {
     display: flex;
     flex: 1;
+    align-items: center;
 }
 
 /* Navigation */
@@ -110,7 +112,7 @@ h6 {
 }
 
 .nav_link {
-    display: inline-block;
+    /* display: inline-block; */
     margin-left: 25px;
     text-decoration: none;
     color: #DFF8CE;
@@ -143,6 +145,51 @@ h6 {
 .nav_link:hover:after {
     display: block;
     opacity: 1;
+}
+
+.mobile_icons {
+    display: none;
+}
+
+/* Nav toggle */
+.nav_toggle {
+    position: absolute;
+    width: 24px;
+
+    padding: 10px 0px;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+
+.nav_toggle_item {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 2px;
+    background-color: #DFF8CE;
+}
+
+.nav_toggle_item:before,
+.nav_toggle_item:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #DFF8CE;
+    position: absolute;
+}
+
+.nav_toggle_item:before {
+    top: -8px;
+}
+
+.nav_toggle_item:after {
+    bottom: -8px;
 }
 
 
@@ -373,6 +420,7 @@ h6 {
     .worker .man {
         width: 265px;
     }
+
     .worker .lamp {
         width: 60px;
     }
@@ -426,9 +474,11 @@ h6 {
     .footer_inner {
         height: 45px;
     }
+
     .copyright {
         font-size: 14px;
     }
+
     .copyright img {
         width: 15px;
     }
@@ -440,10 +490,57 @@ h6 {
 }
 
 @media (max-width: 725px) {
+    /* Header */
+    .header_inner {
+        /* background-color: #0B151A; */
+    }
+    .mobile_icons {
+        display: block;
+    }
     .navigation {
         display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 25px;
+        padding-top: 40px;
+        width: 100%;
+
+        top: 100%;
+        left: 0;
+        background-color: #0B151A;
     }
+    .navigation img {
+        margin-bottom: 10px;
+    }
+    .mobile_icons {
+        padding: 30px 0px 15px 0px;
+    }
+
+    .nav_link {
+        display: block;
+        margin: 0;
+        padding: 5px 0px;
+
+    }
+    .nav_link:after {
+        display: none;
+    }
+    .nav_link:hover:after {
+        display: none;
+    }
+
     .header:after {
         display: none;
+    }
+
+    .nav_toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 490px) {
+    .main_info {
+        width: 300px;
     }
 }
