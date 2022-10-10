@@ -13,11 +13,13 @@ $(function () {
 
         $("#header").toggleClass("active");
         $("#navigation").toggleClass("active");
+        $("#nav_toggle").toggleClass("active");
     })
 
     $('#icon_link').on('click', function () {
 
         $("#header").toggleClass("active");
         $("#navigation").toggleClass("active");
+        $("#nav_toggle").toggleClass("active");
     })
 });
