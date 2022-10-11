@@ -1,12 +1,14 @@
 /* Main */
 .main {
-    margin-top: 55px;
+    /* margin-top: 55px; */
     min-height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .main_inner {
     width: 100%;
-    margin: 0 auto;
+    margin: 55px auto 0px auto;
     display: flex;
     flex-direction: row;
 }
@@ -74,6 +76,7 @@
 }
 
 @media (max-width: 1000px) {
+
     /* Main */
     .main_info {
         width: 400px;
@@ -110,6 +113,7 @@
 }
 
 @media (max-width: 860px) {
+
     /* Main */
     .main_inner {
         flex-direction: column-reverse;
@@ -117,7 +121,7 @@
     }
 
     .main_info {
-        margin: 20px 20px;
+        margin: 20px 20px 0 20px;
         width: 450px;
     }
 

@@ -259,7 +259,7 @@ h6 {
 
 /* Buttons */
 .last_works_button {
-    margin: 35px 100px 35px 100px;
+    margin: 55px 100px 55px 100px;
 }
 
 /* Scrollbar */
@@ -352,6 +352,10 @@ h6 {
 
     .nav_link {
         font-size: 20px;
+    }
+
+    .nav_link:after {
+        margin-top: 10px;
     }
 
     .header:after {
