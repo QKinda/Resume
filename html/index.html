@@ -14,13 +14,12 @@
 
 <body>
     <div class="wrapper">
-
-        <section class="header lock-padding" id="header">
+        <section id="header" class="header lock-padding">
             <div class="container">
                 <div class="header_inner">
                     <div class="write_me">
                         <img class="icon" src="../assets/imgs/icons/Write_icon.png" alt="Write_icon">
-                        <a class="nav_link popup-link" href="#popup">Write me</a>
+                        <a href="#popup" class="wm_link popup-link">Write me</a>
                     </div>
                     <nav class="navigation" id="navigation">
                         <img class="icon" id="icon_link" src="../assets/imgs/icons/Home_icon.png" alt="Home_icon">
@@ -80,7 +79,7 @@
                 </div>
             </div>
         </section>
-        <section class="footer lock-padding">
+        <section id="footer" class="footer lock-padding">
             <div class="container">
                 <div class="footer_inner">
                     <div class="copyright">
@@ -105,24 +104,26 @@
     <div id="popup" class="popup">
         <div class="popup_body">
             <div class="popup_content">
-                <div class="form">
+                <div id="form" class="form">
                     <form action="#" id="form" class="form_body">
                         <div class="form_header">Send me an email</div>
                         <div class="form_item">
                             <label for="formName" class="form_label">Name</label>
-                            <input id="formName" type="text" name="name" class="form_input">
+                            <input id="formName" type="text" name="name" class="form_input _req" autocomplete="off">
                         </div>
                         <div class="form_item">
                             <label for="formEmail" class="form_label">Email</label>
-                            <input id="formEmail" type="text" name="email" class="form_input">
+                            <input id="formEmail" type="text" name="email" class="form_input _req _email" autocomplete="off">
                         </div>
                         <div class="form_item">
                             <label for="formMessage" class="form_label">Message</label>
-                            <textarea id="formMessage" type="text" name="message" class="form_input"></textarea>
+                            <textarea id="formMessage" type="text" name="message" class="form_input _req" autocomplete="off"></textarea>
                         </div>
                         <button type="submit" class="wm_form_button">
                             <img src="../assets/imgs/FormButton.png" alt="FormButton" width="188px">
                         </button>
+                        <!-- <a href="#header" class="popup_close close-popup">XXX</a>
+                        <a href="#popup_2" class="popup-link">popup2</a> -->
                     </form>
                 </div>
             </div>
@@ -131,8 +132,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../assets/scripts/app.js"></script>
-    <script src="../assets/scripts/preloader.js"></script>
     <script src="../assets/scripts/popup_form.js"></script>
+    <script src="../assets/scripts/validation.js"></script>
 
 </body>
 

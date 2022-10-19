@@ -54,6 +54,10 @@ button {
     margin: 0 auto;
 }
 
+.wrapper {
+    height: 100%;
+}
+
 /* Icons */
 .icon {
     /* position: absolute; */
@@ -130,7 +134,8 @@ button {
     align-items: center;
 }
 
-.nav_link {
+.nav_link,
+.wm_link {
     /* display: inline-block; */
     margin-left: 25px;
     text-decoration: none;
@@ -288,6 +293,8 @@ button {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(#56855bbd, #23493cbd);
 }
+
+
 
 /* Preloader */
 /* #preloader {

@@ -1,6 +1,6 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lockPadding');
+const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
 
@@ -11,24 +11,36 @@ if (popupLinks.length > 0) {
         const popupLink = popupLinks[index];
         popupLink.addEventListener("click", function (e) {
             const popupName = popupLink.getAttribute('href').replace('#', '');
-            const currentPopup = document.getElementById(popupName);
-            popupOpen(currentPopup);
+            const curentPopup = document.getElementById(popupName);
+            popupOpen(curentPopup);
             e.preventDefault();
         });
     }
 }
 
-function popupOpen(currentPopup) {
-    if (currentPopup && unlock) {
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        const el = popupCloseIcon[index];
+        el.addEventListener('click', function (e) {
+            popupClose(el.closest('.popup'));
+            e.preventDefault();
+        });
+    }
+}
+
+
+function popupOpen(curentPopup) {
+    if (curentPopup && unlock) {
         const popupActive = document.querySelector('.popup.open');
         if (popupActive) {
             popupClose(popupActive, false);
         }
         else {
             bodyLock();
-        }
-        currentPopup.classList.add('open');
-        currentPopup.addEventListener("click", function (e) {
+        } 
+        curentPopup.classList.add('open');
+        curentPopup.addEventListener('click', function (e) {
             if (!e.target.closest('.popup_content')) {
                 popupClose(e.target.closest('.popup'));
             }
@@ -51,13 +63,13 @@ function bodyLock() {
     if (lockPadding.length > 0) {
         for (let index = 0; index < lockPadding.length; index++) {
             const el = lockPadding[index];
-            el.getElementsByClassName.paddingRight = lockPaddingValue;
+            el.style.paddingRight = lockPaddingValue;
         }
     }
     body.style.paddingRight = lockPaddingValue;
     body.classList.add('lock');
 
-    unlock - false;
+    unlock = false;
     setTimeout(function () {
         unlock = true;
     }, timeout);
@@ -73,16 +85,16 @@ function bodyUnLock() {
         }
         body.style.paddingRight = '0px';
         body.classList.remove('lock');
-    }.timeout);
+    }, timeout);
 
     unlock = false;
     setTimeout(function () {
         unlock = true;
-    }.timeout);
+    }, timeout);
 }
 
 document.addEventListener('keydown', function (e) {
-    if (e.number === 27) {
+    if (e.which === 27) {
         const popupActive = document.querySelector('.popup.open');
         popupClose(popupActive);
     }
