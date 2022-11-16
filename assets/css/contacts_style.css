@@ -1,0 +1,106 @@
+.main {
+    min-height: 100%;
+}
+
+.contacts_main {
+    margin: 125px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contacts_message {
+    width: 450px;
+    margin: 25px 0px;
+}
+
+.contacts_header {
+    font-size: 48px;
+    color: #8ABD6E;
+}
+
+.contacts_connect {
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    justify-content: space-between;
+}
+.contact_card_bg {
+    background: #061319;
+}
+.contact_card {
+    display: flex;
+    align-items: center;
+    background: #071820;
+    transition: transform .2s linear;
+}
+
+.contact_card:hover {
+    transform: translate3d(-9px, -9px, 0);
+    /* border-top: 3px solid #56855B;
+    border-left: 3px solid #56855B;
+    border-right: 3px solid #56855B;
+    border-bottom: 3px solid #56855B; */
+    /* background: #061319; */
+}
+
+.contact_card img {
+    width: 100px;
+    margin: 10px 20px;
+}
+
+.contact_card a {
+    text-decoration: none;
+    color: #DFF8CE;
+    transition: color .2s linear;
+    margin-right: 20px;
+}
+
+.contact_card a:hover {
+    color: #8ABD6E;
+}
+
+.message_div {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    justify-content: end;
+}
+
+.message_top {
+    display: block;
+    animation: infinite 1.5s alternate message_top_anim;
+}
+
+.message_bottom {
+    display: block;
+    animation: infinite 1.5s alternate message_bottom_anim;
+    align-self: center;
+}
+
+@keyframes message_top_anim {
+    from {
+        transform: translate3d(0px, 0px, 0);
+        transform: rotate3d(0);
+    }
+  
+    to {
+        transform: translate3d(0px, 0px, 0);
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+  }
+
+@keyframes message_bottom_anim {
+    from {
+        width: 200px;
+        bottom: 0;
+        transform: rotate3d(0);
+    }
+  
+    to {
+        width: 256px;
+        bottom: 0;
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+  }

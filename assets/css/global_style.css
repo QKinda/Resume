@@ -49,6 +49,13 @@ button {
     background-color: transparent;
 }
 
+::selection {
+    background: #dff8ce8d; /* Safari */
+    }
+::-moz-selection {
+    background: #dff8ce8d; /* Firefox */
+}
+
 /* Container */
 .container {
     width: 100%;
